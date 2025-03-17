@@ -1,16 +1,25 @@
 package threads1.li.xin.ping;
-import static java.lang.System.*;
+
+import static java.lang.System.out;
+
 public class threefifteenwork  extends Thread{
-    int count=0;
+    private static int  count=100;
     @Override
     public void run() {
         super.run();
 
-            for (int i=0;i<100;i++){
-                if(i%2==0){
-                   out.println(Thread.currentThread().getName()+"~"+i);
-                }
+        while (count!=0){
+
+            if(count !=0){
+                count--;
+                out.println(Thread.currentThread().getName()+"卖出一张票，现在还有"+count+"张票");
             }
+        }
+
+
+
+
+
 
 
     }
