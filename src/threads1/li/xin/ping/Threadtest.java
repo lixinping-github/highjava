@@ -3,7 +3,7 @@ import java.lang.Thread;
 import java.lang.Runnable;
 
 
-public class TestThread extends Thread {
+public class Threadtest extends Thread {
     private Runnable target;
 
 //用来查找0--100之间的偶数
