@@ -1,7 +1,9 @@
 package threads1.li.xin.ping;
 import static java.lang.System.*;
-public class Runs implements Runnable{
+public class Runs implements Runnable{ //run方法调用runnable接口
     private int count = 100;
+
+
     public void run(){
 
         while(count!=0){
