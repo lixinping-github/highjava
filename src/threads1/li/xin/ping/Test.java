@@ -7,7 +7,8 @@ public class Test {
 
         ThreadTest1 test1=new ThreadTest1();
         Thread th=new Thread(test1);
-        th.start();
+        th.start();   //可以放多个
+
 
     }
 
