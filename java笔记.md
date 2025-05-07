@@ -454,9 +454,40 @@ public class InterfaceTest {
 
 第二：调用当前线程中重写的run方法 
 
+### 14.2匿名子类编写
+
+```java
+package threads1.li.xin.ping;
+import java.lang.Thread;
+public class Test {
+
+//run subject at main thread
+    public static void main(String... args){ 
+    new Thread(){
+        @Override
+        public void run(){
+            for (int i=0;i<100;i++){
+                if (i %2 ==0)
+                System.out.println(Thread.currentThread().getName() + "~" + i);
+            }
+        }
+    }.start();
 
 
+    }
 
+
+}
+```
+
+### 14.3thread常用方法
+
+1. String  getName()获取线程的名称
+2. void setName(String name)设置线程的名称
+3. run()线程被调度的时候所调用的操作
+4. void start()启动线程，并执行run()方法
+5. static Thread currentThread() 返回当前线程
+6. yield() 当前线程给其他线程让步
 
 
 
