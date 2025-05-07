@@ -4,17 +4,12 @@ public class Test {
 
 //run subject at main thread
     public static void main(String... args){
+    Threadtest t1=new Threadtest(true);
+    t1.start();
+    Threadtest t2= new Threadtest(false);
+    t2.start();
 
-        ThreadTest1 test1=new ThreadTest1();
-        ThreadTest1 test2=new ThreadTest1();
-        new Thread(test1).start();
-        new Thread(test2).start();
-           //可以放多个
-        for(int i= 0;i<100;i++){
-            if (i %2 != 0){
-                System.out.println(Thread.currentThread().getName()+i);
-            }
-        }
+
     }
 
 
