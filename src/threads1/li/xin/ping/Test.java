@@ -49,7 +49,12 @@ public class Test {
 //    }
 
 
-
+        threefifteenwork t1=new threefifteenwork();
+        threefifteenwork t2=new threefifteenwork();
+        threefifteenwork t3=new threefifteenwork();
+        t3.start();
+        t1.start();
+        t2.start();
 
 
 

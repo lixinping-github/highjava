@@ -8,11 +8,12 @@ public class threefifteenwork  extends Thread{
     public void run() {
         super.run();
 
-        while (count!=0){
-
-            if(count !=0){
-                count--;
+        while (true){
+            if(count >0){
                 out.println(Thread.currentThread().getName()+"卖出一张票，现在还有"+count+"张票");
+                count--;
+            }else {
+                break;
             }
         }
 
