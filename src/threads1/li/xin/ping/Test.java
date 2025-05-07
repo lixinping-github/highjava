@@ -1,9 +1,11 @@
 package threads1.li.xin.ping;
+import jdk.nashorn.internal.runtime.regexp.joni.exception.InternalException;
+
 import java.lang.Thread;
 public class Test {
 
 //run subject at main thread
-    public static void main(String... args){
+    public static void main(String... args)throws InterruptedException{
 //    new Thread(){
 //
 //        @Override
@@ -31,12 +33,16 @@ public class Test {
 
     Thread.currentThread().setName("主线程");
     Threadtest t1=new Threadtest(true,"线程1");
-
+    //解决我主动抛出来的一个异常
     t1.start();
+    t1.setPriority(Thread.MIN_PRIORITY);
 
-    for (int i=0;i<100;i++){
-        if (i % 2 != 0)
+        Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
+    for (int i=0;i<100;i++) {
+        if (i % 2 != 0){
         System.out.println(Thread.currentThread().getName()+ "~"+i);
+
+        }
     }
 
 

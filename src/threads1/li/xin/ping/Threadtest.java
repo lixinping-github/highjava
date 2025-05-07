@@ -13,13 +13,13 @@ public class Threadtest extends Thread {
     }
 //用来查找0--100之间的偶数
     @Override
-    public void run() {
+    public void run()  {
         super.run();
-        this.yield();
         for (int i=0;i<100;i++){
             if (bol){
                 if(i%2 == 0){
-                    System.out.println(Thread.currentThread().getName()+"~"+i);
+
+                        System.out.println(Thread.currentThread().getName()+"~"+i);
                 }
             }else{
                 if(i%2 != 0){

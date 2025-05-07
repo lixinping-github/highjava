@@ -487,7 +487,22 @@ public class Test {
 3. run()线程被调度的时候所调用的操作
 4. void start()启动线程，并执行run()方法
 5. static Thread currentThread() 返回当前线程
-6. yield() 当前线程给其他线程让步
+6. static void yield() 当前线程给其他线程让步 释放当前线程执行权
+7. join() 在线程a 中调用线程b的join方法，此时线程a进入阻塞状态，直到线程b调用完毕后线程a才开始执行
+8. stop()强制停止当前线程，不推荐使用
+9. sleep(millitime) 让线程休眠，进入阻塞状态，millitime为毫秒单位
+10. isalive()检查一个线程是否存活
+
+### 14.4线程调度
+
+JAVA调度方法：
+
+1. 相同优先级线程组成先进先出队列，（先到先服务），使用时间片策略
+2. 高优先级者，使用优先调度抢占式策略
+3. 设置线程优先级 setPriority()传输一个数字 MAX_PRIORITY  NORMAL_PRIORITY MIN_PRIORITY
+4. 获取线程优先级，getPriority()   
+
+
 
 
 
