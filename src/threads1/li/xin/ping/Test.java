@@ -31,13 +31,16 @@ public class Test {
 //        }.start();
 //
 
-    Thread.currentThread().setName("主线程");
-    Threadtest t1=new Threadtest(true,"线程1");
-    //解决我主动抛出来的一个异常
-    t1.start();
-    t1.setPriority(Thread.MIN_PRIORITY);
 
         Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
+    Thread.currentThread().setName("主线程");
+    Threadtest t1=new Threadtest(true,"线程1");
+
+        t1.setPriority(Thread.MIN_PRIORITY);
+    //解决我主动抛出来的一个异常
+    t1.start();
+
+
     for (int i=0;i<100;i++) {
         if (i % 2 != 0){
         System.out.println(Thread.currentThread().getName()+ "~"+i);
