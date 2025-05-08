@@ -5,7 +5,7 @@ import java.lang.Thread;
 public class Test {
 
 //run subject at main thread
-    public static void main(String... args)throws InterruptedException{
+    public static void main(String... args){
 //    new Thread(){
 //
 //        @Override
@@ -49,16 +49,28 @@ public class Test {
 //    }
 
 
-        threefifteenwork t1=new threefifteenwork();
-        threefifteenwork t2=new threefifteenwork();
-        threefifteenwork t3=new threefifteenwork();
-        t3.start();
-        t1.start();
-        t2.start();
+//        threefifteenwork t1=new threefifteenwork();
+//        threefifteenwork t2=new threefifteenwork();
+//        threefifteenwork t3=new threefifteenwork();
+//        t3.start();
+//        t1.start();
+//        t2.start();
+    Runs r1=new Runs();
 
 
+    Thread threads1=new Thread(r1);
+    Thread threads2=new Thread(r1);
+    Thread threads3=new Thread(r1);
+    threads1.setName("窗口1");
+    threads1.start();
+//  746line  run
+
+    threads2.setName("窗口2");
+    threads2.start();
 
 
+    threads3.setName("窗口3");
+    threads3.start();
 
  }
 

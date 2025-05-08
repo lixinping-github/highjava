@@ -502,7 +502,14 @@ JAVA调度方法：
 3. 设置线程优先级 setPriority()传输一个数字 MAX_PRIORITY  NORMAL_PRIORITY MIN_PRIORITY
 4. 获取线程优先级，getPriority()   
 
+### 14.5实现runnable接口
 
+1. 创建一个实现了Runnable接口的类
+2. 实现run()方法
+3. 创建一个 Thread类实例对象
+4. 创建一个实现了Runnable接口的类的实例对象
+5. 将run对象放入 thread实例对象构造方法中
+6. 调用thread实例对象的start方法
 
 
 
