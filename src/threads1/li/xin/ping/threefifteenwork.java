@@ -9,21 +9,15 @@ public class threefifteenwork  extends Thread{
         super.run();
 
         while (true){
-            if(count >0){
-                out.println(Thread.currentThread().getName()+"卖出一张票，现在还有"+count+"张票");
-                count--;
+                if (count > 0) {
+                    count--;
+                    out.println(Thread.currentThread().getName() + "卖出一张票，现在还有" + count + "张票");
 
-            }else {
-                break;
-            }
+                } else {
+                    break;
+                }
+
         }
-
-
-
-
-
-
-
     }
 
 
