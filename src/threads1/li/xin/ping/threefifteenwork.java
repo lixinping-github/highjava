@@ -12,6 +12,7 @@ public class threefifteenwork  extends Thread{
             if(count >0){
                 out.println(Thread.currentThread().getName()+"卖出一张票，现在还有"+count+"张票");
                 count--;
+
             }else {
                 break;
             }

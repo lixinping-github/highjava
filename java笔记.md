@@ -493,7 +493,7 @@ public class Test {
 9. sleep(millitime) 让线程休眠，进入阻塞状态，millitime为毫秒单位
 10. isalive()检查一个线程是否存活
 
-### 14.4线程调度
+### 14.4线程调度优先级getPriority()   
 
 JAVA调度方法：
 
@@ -510,6 +510,181 @@ JAVA调度方法：
 4. 创建一个实现了Runnable接口的类的实例对象
 5. 将run对象放入 thread实例对象构造方法中
 6. 调用thread实例对象的start方法
+
+
+
+
+
+### 14.6 Object 常用线程三方法
+
+1. wait()等待
+2. notify()通知  唤醒
+3. notifyAll()通知所有 唤醒
+
+
+
+### 14.7守护线程和用户线程
+
+守护线程定义：守护线程目的是为了服务用户线程，thread.setDaemon(true);可以将一个用户线程变为守护线程
+
+守护线程：垃圾回收线程，异常处理线程
+
+### 14.8线程生命周期
+
+```java
+ public enum State {
+        /**
+         * Thread state for a thread which has not yet started.
+         */
+        NEW,
+
+        /**
+         * Thread state for a runnable thread.  A thread in the runnable
+         * state is executing in the Java virtual machine but it may
+         * be waiting for other resources from the operating system
+         * such as processor.
+         */
+        RUNNABLE,
+
+        /**
+         * Thread state for a thread blocked waiting for a monitor lock.
+         * A thread in the blocked state is waiting for a monitor lock
+         * to enter a synchronized block/method or
+         * reenter a synchronized block/method after calling
+         * {@link Object#wait() Object.wait}.
+         */
+        BLOCKED,
+
+        /**
+         * Thread state for a waiting thread.
+         * A thread is in the waiting state due to calling one of the
+         * following methods:
+         * <ul>
+         *   <li>{@link Object#wait() Object.wait} with no timeout</li>
+         *   <li>{@link #join() Thread.join} with no timeout</li>
+         *   <li>{@link LockSupport#park() LockSupport.park}</li>
+         * </ul>
+         *
+         * <p>A thread in the waiting state is waiting for another thread to
+         * perform a particular action.
+         *
+         * For example, a thread that has called <tt>Object.wait()</tt>
+         * on an object is waiting for another thread to call
+         * <tt>Object.notify()</tt> or <tt>Object.notifyAll()</tt> on
+         * that object. A thread that has called <tt>Thread.join()</tt>
+         * is waiting for a specified thread to terminate.
+         */
+        WAITING,
+
+        /**
+         * Thread state for a waiting thread with a specified waiting time.
+         * A thread is in the timed waiting state due to calling one of
+         * the following methods with a specified positive waiting time:
+         * <ul>
+         *   <li>{@link #sleep Thread.sleep}</li>
+         *   <li>{@link Object#wait(long) Object.wait} with timeout</li>
+         *   <li>{@link #join(long) Thread.join} with timeout</li>
+         *   <li>{@link LockSupport#parkNanos LockSupport.parkNanos}</li>
+         *   <li>{@link LockSupport#parkUntil LockSupport.parkUntil}</li>
+         * </ul>
+         */
+        TIMED_WAITING,
+
+        /**
+         * Thread state for a terminated thread.
+         * The thread has completed execution.
+         */
+        TERMINATED;
+    }
+```
+
+1.  新建状态：当一个线程类或者其子类被声明并创建的时候，新生的线程对象处于新建状态，new一个线程类
+
+   ​			过程=>调用start方法
+
+2. 就绪状态：处于新建状态的线程被执行start时，进入线程队列等待CPU时间片，此时已经具备了被CPU执行的条件，只是还没有被执行。
+
+   ​			过程=>CPU执行操作
+
+3. 运行状态：就绪的线程获取CPU资源，进入运行状态，执行操作
+
+   =>在本线程中调用其他线程join，导致本线程阻塞；sleep(millitime) 让线程休眠进入阻塞状态；wait;等待同步锁
+
+4. 阻塞状态：某种情况下，线程被人为挂起或者其他操作影响，让出CPU并临时中止操作，进入阻塞状态
+
+5. terminated  终止状态：线程完成全部任务或者其他异常情况导致结束
+
+
+
+### 14.9线程同步
+
+同步代码块 synchronized(lock   同步监视器){
+
+同步代码
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
