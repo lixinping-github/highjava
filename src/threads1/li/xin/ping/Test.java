@@ -65,6 +65,8 @@ public class Test {
     threads1.start();
 //  746line  run
 
+
+
     threads2.setName("窗口2");
     threads2.start();
 
