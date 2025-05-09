@@ -74,7 +74,11 @@ public class Test {
     threads3.setName("窗口3");
     threads3.start();
 
+
+
+
+
+
+
  }
-
-
 }
