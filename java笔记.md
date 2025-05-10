@@ -636,17 +636,63 @@ JAVA调度方法：
 
 ### 14.10死锁
 
+不同的线程分别占用对方的同步资源不放弃，都在等待对方放弃自己需要的同步资源，形成程序死锁
+
+```java
+public class Main {
+    static final Object resourceA = new Object();
+    static final Object resourceB = new Object();
+    public static void main(String[] args) {
+        //TIP 当文本光标位于高亮显示的文本处时按 <shortcut actionId="ShowIntentionActions"/>
+        // 查看 IntelliJ IDEA 建议如何修正。
+ Thread t1 = new Thread(() -> {
+            synchronized (resourceA) {
+                System.out.println("Thread 1: locked resource A");
+                try { Thread.sleep(100); } catch (InterruptedException ignored) {}
+                synchronized (resourceB) {
+                    System.out.println("Thread 1: locked resource B");
+                }
+            }
+        });
+
+        Thread t2 = new Thread(() -> {
+            synchronized (resourceB) {
+                System.out.println("Thread 2: locked resource B");
+                try { Thread.sleep(100); } catch (InterruptedException ignored) {}
+                synchronized (resourceA) {
+                    System.out.println("Thread 2: locked resource A");
+                }
+            }
+        });
+
+        t1.start();
+        t2.start();
+
+    }
+}
+```
 
 
 
+### 14.11Lock锁解决线程安全问题 以及公平锁
 
+ReentrantLock类，定义实例
 
+ReentrantLock lock=new ReentrantLock();
 
+lock.lock();//加锁
 
+try{
 
+}finally{
 
+lock.unlock();//解锁
 
+}
 
+ReentrantLock lock=new ReentrantLock();  参数加true ，则此锁为公平锁；
+
+synchronized和reentrantlock之间的不同？？:question:
 
 
 
