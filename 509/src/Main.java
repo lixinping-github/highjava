@@ -21,12 +21,11 @@ class Lanhan{
 
         synchronized (Lanhan.class){ //此时为线程安全
          if (lan == null){
-            lan = new Lanhan();
+            lan = new Lanhan();}
             return lan;
         }
-        else{
-            return lan;
-        }}
-    }
 
+
+
+    }
 }
