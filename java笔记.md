@@ -694,11 +694,13 @@ lock.unlock();//解锁
 
 ReentrantLock lock=new ReentrantLock();  参数加true ，则此锁为公平锁；
 
-synchronized和reentrantlock之间的不同？？:question:
+synchronized和reentrantlock之间的不同:question:
 
 lock方式可以手动添加锁和解锁，灵活性高，有公平锁等多功能；synchronized则自动启动锁并自动释放锁
 
 
+
+### 14.12线程通信
 
 
 
