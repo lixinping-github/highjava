@@ -732,13 +732,45 @@ lock方式可以手动添加锁和解锁，灵活性高，有公平锁等多功�
 
 创建callable实例，并使用FutureTesk类，放入callable实例。 使用futuretest类的get方法，get方法的返回值为call方法的返回值，get方法的目的是为了获取返回值并使用Thread类的构造方法传入FutureTesk类，调用start方法。
 
+callable接口为泛型接口，FutureTesk为泛型类
+
+
+
+
+
+:two: 使用线程池------线程管理
+
+原因：对于经常创建和销毁使用量特别大的资源，如并发情况下的线程，对性能影响很大
+
+corePoolSize:线程池的大小
+
+maximumPoolSize:最大线程数
+
+keepAliveTime:线程没有任务的时候最多保持多长时间后会终止......
 
 
 
 
 
 
-:two: 使用线程池
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
