@@ -35,12 +35,12 @@ public class Main {
         Clerk clerk=new Clerk();
         Porducer p1=new Porducer(clerk);
         Consume c1=new Consume(clerk);
-
+        Consume c2=new Consume(clerk);
         p1.setName("生产者");
-        c1.setName("消费者");
-
+        c1.setName("消费者1");
+        c2.setName("消费者2");
         p1.start();
         c1.start();
-
+        c2.start();
     }
 }
