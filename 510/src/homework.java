@@ -12,7 +12,7 @@ public class homework implements Runnable {
 
     @Override
     public void run() {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 300; i++) {
             lock.lock();//加锁
             try {
                 try {
