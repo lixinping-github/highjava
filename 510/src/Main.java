@@ -1,3 +1,9 @@
+import com.sun.org.apache.bcel.internal.generic.NEW;
+
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.FutureTask;
+
 //TIP 要<b>运行</b>代码，请按 <shortcut actionId="Run"/> 或
 // 点击装订区域中的 <icon src="AllIcons.Actions.Execute"/> 图标。
 public class Main {
@@ -32,15 +38,28 @@ public class Main {
 //        thread1.start();
 //        thread2.start();
 
-        Clerk clerk=new Clerk();
-        Porducer p1=new Porducer(clerk);
-        Consume c1=new Consume(clerk);
-        Consume c2=new Consume(clerk);
-        p1.setName("生产者");
-        c1.setName("消费者1");
-        c2.setName("消费者2");
-        p1.start();
-        c1.start();
-        c2.start();
+//        Clerk clerk=new Clerk();
+//        Porducer p1=new Porducer(clerk);
+//        Consume c1=new Consume(clerk);
+//        Consume c2=new Consume(clerk);
+//        p1.setName("生产者");
+//        c1.setName("消费者1");
+//        c2.setName("消费者2");
+//        p1.start();
+//        c1.start();
+//        c2.start();
+
+        JDKNEW j1=new JDKNEW();
+
+        FutureTask fut=new FutureTask(j1);
+        new Thread(fut).start();
+        try {
+            Object sum = fut.get();
+            System.out.println(sum);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        } catch (ExecutionException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

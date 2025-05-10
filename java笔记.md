@@ -724,11 +724,21 @@ lock方式可以手动添加锁和解锁，灵活性高，有公平锁等多功�
 
 
 
+### 14.14新增线程创建方式
+
+:one:实现callable接口
+
+重写call方法
+
+创建callable实例，并使用FutureTesk类，放入callable实例。 使用futuretest类的get方法，get方法的返回值为call方法的返回值，get方法的目的是为了获取返回值并使用Thread类的构造方法传入FutureTesk类，调用start方法。
 
 
 
 
 
+
+
+:two: 使用线程池
 
 
 
