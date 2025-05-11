@@ -774,7 +774,7 @@ void.shutdown()关闭连接池
 
 ## 15常用类String
 
-常用类
+常用类String两个特性：不可继承性，不可变性
 
 
 
