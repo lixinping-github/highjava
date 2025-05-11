@@ -1,8 +1,6 @@
 import com.sun.org.apache.bcel.internal.generic.NEW;
 
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.FutureTask;
+import java.util.concurrent.*;
 
 //TIP 要<b>运行</b>代码，请按 <shortcut actionId="Run"/> 或
 // 点击装订区域中的 <icon src="AllIcons.Actions.Execute"/> 图标。
@@ -49,17 +47,35 @@ public class Main {
 //        c1.start();
 //        c2.start();
 
-        JDKNEW j1=new JDKNEW();
+//        JDKNEW j1=new JDKNEW();
+//
+//        FutureTask fut=new FutureTask(j1);
+//        new Thread(fut).start();
+//        try {
+//            Object sum = fut.get();
+//            System.out.println(sum);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        } catch (ExecutionException e) {
+//            throw new RuntimeException(e);
+//        }
 
-        FutureTask fut=new FutureTask(j1);
-        new Thread(fut).start();
+        JDKNEW j2=new JDKNEW();
+        FutureTask future=new FutureTask(j2);
+        new Thread(future).start();
         try {
-            Object sum = fut.get();
-            System.out.println(sum);
+            System.out.println("最终结果"+future.get());
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         } catch (ExecutionException e) {
             throw new RuntimeException(e);
         }
+//        window  win1=new window();
+//
+//        ExecutorService services= Executors.newFixedThreadPool(10);//创建一个长度为10的接口
+//        services.execute(win1);
+//        services.submit(win1);
+//        services.shutdown();
+
     }
 }

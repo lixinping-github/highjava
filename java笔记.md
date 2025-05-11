@@ -738,9 +738,9 @@ callable接口为泛型接口，FutureTesk为泛型类
 
 
 
-:two: 使用线程池------线程管理
+:two: 使用线程池------线程管理  ----难度特别大
 
-原因：对于经常创建和销毁使用量特别大的资源，如并发情况下的线程，对性能影响很大
+原因：对于经常创建和销毁使用量特别大的资源，如并发情况下的线程，对性能影响很大   ————工具实现类 ThreadPoolExecutor则包含我们所需的线程方法
 
 corePoolSize:线程池的大小
 
@@ -748,23 +748,33 @@ maximumPoolSize:最大线程数
 
 keepAliveTime:线程没有任务的时候最多保持多长时间后会终止......
 
+Executors:线程池的工具类，工厂类，用于创建并返回不同类型的线程池；
+
+ExecutorSerivce:线程池接口
+
+Excutors.newCachedThreadPool()  创建一个可根据需要创建新线程的线程池
+
+Excutors.newFixedThreadPool()创建一个固定数量线程的线程池
+
+Excutors.newSingleThreadExecutor()创建只有一个线程的线程池
+
+Excutor.newScheduledThreadPool(n)：创建一个线程池，它可安排给定延迟后运行命令或者定期的执行
+
+Excutorserivce中有两个常用方法：
+
+submit() 提交  适用于callable接口类型线程
+
+void execute（）执行方法   适用于 runnable接口类型线程
+
+void.shutdown()关闭连接池
 
 
 
 
 
+## 15常用类String
 
-
-
-
-
-
-
-
-
-
-
-
+常用类
 
 
 
