@@ -23,12 +23,37 @@ public class StringTest {
 //       c2[0]=c2[c2.length-1];
 //       c2[c2.length-1]=item;
 //       System.out.println(c2);
-        byte[] bytes= null;
+//        byte[] bytes= null;
+//
+//        try {
+//            bytes = str.getBytes("GBK");
+//        } catch (UnsupportedEncodingException e) {
+//            throw new RuntimeException(e);
+//        }
 
-            bytes = str.getBytes(StandardCharsets.UTF_8);
+//        for (int i=0;i<bytes.length;i++){
+//            System.out.println(bytes[i]);
+//        }
+//        String strs= null;
+//        try {
+//            strs = new String(bytes,"gbk");
+//        } catch (UnsupportedEncodingException e) {
+//            throw new RuntimeException(e);
+//        }
+//        System.out.println(strs);
 
-        for (int i=0;i<bytes.length;i++){
-            System.out.println(bytes[i]);
-        }
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
