@@ -9,7 +9,10 @@ public class StringTest {
     @Test
     public void test1(){
 
-        System.out.println(String.valueOf(1231));
+       char[] c1=str.toCharArray();
+       for (int i=0;i<c1.length;i++){
+           System.out.println(c1[i]);
+       }
 
     }
 }
