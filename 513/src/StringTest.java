@@ -121,5 +121,17 @@ public class StringTest {
         }
             return result;
     }
+    //获取两个字符串中最大的相同子串
+
+
+
+
+
+
+
+
+
+
+
 
 }
