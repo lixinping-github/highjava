@@ -8,6 +8,6 @@ public class StringTest {
 
     @Test
     public void test1(){
-        System.out.println(str.matches("^1[3-9]\\d{9}$"));
+        System.out.println(String.valueOf(1231));
     }
 }

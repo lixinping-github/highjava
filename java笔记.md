@@ -817,7 +817,7 @@ void.shutdown()关闭连接池
 
 ### 15.3String和其他类型转化
 
-
+静态方法parseXXX() 将其他类型转换为当前类型，valueOf()将其他类型转换为String类型
 
 
 
