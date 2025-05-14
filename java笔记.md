@@ -819,9 +819,9 @@ void.shutdown()关闭连接池
 
 静态方法parseXXX() 将其他类型转换为当前类型，valueOf()将其他类型转换为String类型
 
+String.toCharArray()将字符串转换为字符数组的静态方法
 
-
-
+String和byte[]之间的转化
 
 
 
