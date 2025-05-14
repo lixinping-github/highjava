@@ -774,7 +774,94 @@ void.shutdown()关闭连接池
 
 ## 15常用类String
 
-常用类String两个特性：不可继承性，不可变性
+### 15.1常用类String介绍
+
+1. String实现Serializable接口,表示字符串是可以序列化的
+2. String声明为final，表示String类无法被继承
+3. String实现了Comparable接口，表示字符串可以比较大小
+4. String定义了final char[]用于存储字符串，因final，则字符串为不可变，存储在字符串常量池中；
+
+### 15.2String内存结构
+
+通过字面量的方式给String赋值，String结果放入字符串常量池中，通过new方式给String赋值，String结果放入堆空间中
+
+
+
+15.3String常用方法
+
+1. int length() 获取一个字符串的字符长度；
+2. char charAt(int index) 根据下标获取一个字符串的制定字符，从0开始；返回字符；
+3.  boolean isEmpty() 判断一个字符串是否为空串；
+4. toLowerCase()将字符串全部转小写；
+5. toUpperCase()将字符串全部转大写；
+6. trim()忽略字符串前后的空格，并将结果返回；
+7. equals()比较两个字符串是否相同，为重写方法；
+8. concat()连接两个字符串，返回最终连接的字符串；
+9. compareTo()比较两个字符串的大小，根据unicode编码来判断，返回数字；
+10. substring()返回一个字符串，它是此字符串从beginindex到endindex
+11. boolean  endWith(String suffix)测试字符串是否以制定的后缀结束
+12. boolean startsWith(String prefix)测试字符串是否以制定索引开始
+13. boolean startsWith(String prefix,int toffset)测试字符串从制定索引开始的子字符串是否以指定前缀开始，后一个参数为指定位置
+14. boolean contains(Charsquence s)当且仅当此字符串包含指定的char序列时，返回true;
+15. int indexOf(String str):返回指定子字符串在当前字符串中出现的第一次的索引,未找到返回-1
+16. int indexOf(String str,int fromIndex)返回指定子字符串在此字符串中第一次出现处的索引，从指定索引开始，未找到返回-1
+17. int lastIndexOf(String str);返回指定子字符串在此字符串中最后出现的索引，未找到返回-1
+18. int lastIndexOf(String str,int fromIndex)返回子字符串在此字符串中最后一次出现的索引，从指定索引开始，未找到返回-1
+19. String replace(char oldChar,char newChar);返回一个新的字符串，它是通过newchar字符替换到所有的oldChar字符而来的
+20. String replace(CharSequence target,CharSequence replacement);使用指定的字面值替换序列此匹配字面值目标序列的子字符串
+21. String replaceAll(String regex,String replacement);使用给定的replacement替换此字符串所有匹配给定的正则表达式的子字符串。
+22. String replaceFirst(String regex,String replacement)使用给定的replacement替换此字符串所有匹配给定的正则表达式的第一个子字符串。
+23. boolean matches(String regex):告知此字符串是否匹配给定的正则表达式
+24. String split(String regex)通过指定的正则表达式的匹配拆分此字符串。
+25. String split(String regex,int limit); 通过指定的正则表达式的匹配拆分此字符串
+
+### 15.3String和其他类型转化
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
