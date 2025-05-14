@@ -9,5 +9,7 @@ public class StringTest {
     @Test
     public void test1(){
         System.out.println(String.valueOf(1231));
+
+
     }
 }
