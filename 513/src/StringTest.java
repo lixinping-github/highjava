@@ -10,5 +10,6 @@ public class StringTest {
     public void test1(){
 
         System.out.println(String.valueOf(1231));
+
     }
 }
