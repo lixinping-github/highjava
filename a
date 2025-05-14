@@ -1,0 +1,11 @@
+user.name=joueur
+user.email=lxp775399418@163.com
+safe.directory=F:/算法/SudentClient
+safe.directory=F:/ufile/Ufile/newjava
+safe.directory=F:/ufile/Ufile/highlev
+safe.directory=F:/ufile/Ufile/highlev
+safe.directory=F:/ufile/Ufile/java/Day10threads
+safe.directory=E:/前端
+safe.directory=*
+safe.directory=*
+core.autocrlf=true
