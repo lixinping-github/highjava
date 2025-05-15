@@ -831,6 +831,12 @@ String和byte[]之间的转化  ==>getBytes()
 
 ### 15.4StringBuffer和StringBuilder
 
+String：是不可变字符序列，线程安全，效率偏低，建议多线程用
+
+StringBuffer是可变字符序列；线程安全，效率偏低，建议多线程用
+
+StringBuilder是可变字符序列；线程不安全，效率高，建议单线程用
+
 
 
 

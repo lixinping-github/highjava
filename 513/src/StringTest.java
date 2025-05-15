@@ -45,21 +45,30 @@ public class StringTest {
 //        System.out.println(strs);
 
 //模拟一个trim方法
-        String str="1111";
-
-        System.out.println(str);
-        System.out.println(getCount(str,""));
-
-
+//        String str="1111";
+//
+//        System.out.println(str);
+//        System.out.println(getCount(str,""));
 
 
 
+
+        StringBuffer str1=new StringBuffer("哈哈");
+        System.out.println("哈哈哈嘻嘻");
 
 
 
 
 
     }
+
+
+
+
+
+
+
+
     //*
     //模仿原生方法trim
     // /
