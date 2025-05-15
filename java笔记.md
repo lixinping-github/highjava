@@ -821,9 +821,15 @@ void.shutdown()关闭连接池
 
 String.toCharArray()将字符串转换为字符数组的静态方法
 
-String和byte[]之间的转化
+String和byte[]之间的转化  ==>getBytes()
 
 
+
+
+
+
+
+### 15.4StringBuffer和StringBuilder
 
 
 
