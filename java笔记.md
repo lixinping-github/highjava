@@ -831,13 +831,23 @@ String和byte[]之间的转化  ==>getBytes()
 
 ### 15.4StringBuffer和StringBuilder
 
-String：是不可变字符序列，线程安全，效率偏低，建议多线程用
+String：是不可变字符序列，线程安全，效率偏低，建议多线程用，底层数据使用char数组存储数据。
 
-StringBuffer是可变字符序列；线程安全，效率偏低，建议多线程用
+StringBuffer是可变字符序列；线程安全，效率偏低，建议多线程用，底层数据使用char数组存储数据。当长度过长，将会扩容；
 
-StringBuilder是可变字符序列；线程不安全，效率高，建议单线程用
+StringBuilder是可变字符序列；线程不安全，效率高，建议单线程用；
 
+常用方法：
 
+StringBuffer append(xxx)用于进行字符串拼接
+
+StringBuffer delete(int start,int end)删除指定位置的内容，根据下标
+
+StringBuffer replace(int start,int end,String str)将指定位置元素替换成str
+
+StringBuffer insert(int offset xxx，str)向指定位置插入一串字符串
+
+StringBuffer reverse():将当前数组逆序
 
 
 

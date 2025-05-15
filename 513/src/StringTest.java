@@ -51,10 +51,9 @@ public class StringTest {
 //        System.out.println(getCount(str,""));
 
 
+        StringBuffer str1=new StringBuffer("哈哈嘻嘻");
 
-
-        StringBuffer str1=new StringBuffer("哈哈");
-        System.out.println("哈哈哈嘻嘻");
+        System.out.println(str1.charAt(2));
 
 
 
