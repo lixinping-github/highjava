@@ -79,10 +79,11 @@ public class StringTest {
 //
 
 
-        java.util.Date D1=new java.util.Date(1747369477784L);//1747369477784
-        java.sql.Date D2= new java.sql.Date(D1.getTime());
-
-        System.out.println(D2);
+//        java.util.Date D1=new java.util.Date(1747369477784L);//1747369477784
+//        java.sql.Date D2= new java.sql.Date(D1.getTime());
+        String s1="哈哈";
+        String s2="哈哈";
+        System.out.println(s1 ==  s2);
 
 
 
