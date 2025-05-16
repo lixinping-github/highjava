@@ -79,9 +79,9 @@ public class StringTest {
 //
 
 
-        java.util.Date D1=new java.util.Date();
-        System.out.println(D1.toString());
-        java.sql.Date d2=new java.sql.Date();
+        java.util.Date D1=new java.util.Date();//1747368981081
+        java.util.Date D2=new java.util.Date(1247368981081L);
+        System.out.println(D2);
 
 
 

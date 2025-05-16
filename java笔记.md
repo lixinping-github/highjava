@@ -855,7 +855,9 @@ StringBuffer reverse():将当前数组逆序
 
 System.currentTimeMillis()返回当前时间和1970年1月1日之间的***时间戳***
 
+:one:util.Date=new Date()创建一个当前时间的Date对象
 
+:two: java.sql.Date对应数据库中的日期变量
 
 
 
