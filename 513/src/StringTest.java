@@ -106,20 +106,23 @@ public class StringTest {
 //        }
 
         //三天打鱼。两天晒网，1990-01-01           2020-09-08  总天数%5 == 1 2 3 总天数%5==4 0
-        SimpleDateFormat dFormat=new SimpleDateFormat("yyyy-MM-dd");
-        try {
-            Date d1=dFormat.parse("1990-01-01");
-            Date d2=dFormat.parse("2020-09-08");
-            long timechuo1=d1.getTime();//631123200000
-            long timechuo2=d2.getTime();//1599494400000
-            long result=timechuo2-timechuo1;//968371200000
-            if((result/1000/60/60/24)%5 == 1 || (result/1000/60/60/24)%5 == 2 ||(result/1000/60/60/24)%5 == 3)
-                System.out.println("在打鱼");
-            else if((result/1000/60/60/24)%5 == 4 ||(result/1000/60/60/24)%5 == 0)
-                System.out.println("在晒网");
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
+//        SimpleDateFormat dFormat=new SimpleDateFormat("yyyy-MM-dd");
+//        try {
+//            Date d1=dFormat.parse("1990-01-01");
+//            Date d2=dFormat.parse("2020-09-08");
+//            long timechuo1=d1.getTime();//631123200000
+//            long timechuo2=d2.getTime();//1599494400000
+//            long result=timechuo2-timechuo1;//968371200000
+//            if((result/1000/60/60/24)%5 == 1 || (result/1000/60/60/24)%5 == 2 ||(result/1000/60/60/24)%5 == 3)
+//                System.out.println("在打鱼");
+//            else if((result/1000/60/60/24)%5 == 4 ||(result/1000/60/60/24)%5 == 0)
+//                System.out.println("在晒网");
+//        } catch (ParseException e) {
+//            throw new RuntimeException(e);
+//        }
+
+
+
 
 
 
