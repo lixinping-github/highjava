@@ -79,10 +79,10 @@ public class StringTest {
 //
 
 
-        java.util.Date D1=new java.util.Date();//1747368981081
-        java.util.Date D2=new java.util.Date(1247368981081L);
-        System.out.println(D2);
+        java.util.Date D1=new java.util.Date(1747369477784L);//1747369477784
+        java.sql.Date D2= new java.sql.Date(D1.getTime());
 
+        System.out.println(D2);
 
 
 
