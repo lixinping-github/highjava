@@ -845,6 +845,10 @@ StringBuffer delete(int start,int end)删除指定位置的内容，根据下标
 
 StringBuffer replace(int start,int end,String str)将指定位置元素替换成str
 
+StringBuffer setCharAt(int n,char  h)
+
+StringBuffer CharAt()查找一个字符
+
 StringBuffer insert(int offset xxx，str)向指定位置插入一串字符串
 
 StringBuffer reverse():将当前数组逆序
@@ -853,7 +857,7 @@ StringBuffer reverse():将当前数组逆序
 
 ### 15.5时间和日期
 
-System.currentTimeMillis()返回当前时间和1970年1月1日之间的***时间戳***
+System.currentTimeMillis()返回当前时间和1970年1月1日之间的***时间戳***  通过时间戳将java.sql.Date和java.util.Date进行相互转换
 
 :one:util.Date=new Date()创建一个当前时间的Date对象 
 
@@ -861,15 +865,13 @@ getTime();获取一个Date的时间戳
 
 :two: java.sql.Date对应数据库中的日期变量
 
+:three:SimpleDateFormat：简单日期格式化类,new SimpleDateFormat("指定格式字符串",语言)；
 
+格式化： 日期变为---->字符串  调用Format()方法
 
+解析：格式化的逆过程：---->日期  调用parse()方法
 
-
-
-
-
-
-
+:four::calendar日历类
 
 
 

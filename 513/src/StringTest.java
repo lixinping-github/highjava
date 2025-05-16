@@ -5,8 +5,12 @@ import sun.nio.cs.ext.GBK;
 import javax.xml.transform.Result;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 public class StringTest {
 
@@ -81,36 +85,45 @@ public class StringTest {
 
 //        java.util.Date D1=new java.util.Date(1747369477784L);//1747369477784
 //        java.sql.Date D2= new java.sql.Date(D1.getTime());
-        String s1="哈哈";
-        String s2="哈哈";
-        System.out.println(s1 ==  s2);
+//        String s1="哈哈";
+//        String s2="哈哈";
+//        System.out.println(s1 ==  s2);
+//
+//        StringBuilder sh=new StringBuilder();
+
+//
+//            System.out.println(getCount("abcabacadeajofahiajodaabcde","ab"));
+
+//        String bithary="2020-09-08";
+//        SimpleDateFormat d1=new SimpleDateFormat("yyyy-MM-dd");
+//
+//        try {
+//            Date d2=  d1.parse(bithary);
+//            java.sql.Date d3=new java.sql.Date(d2.getTime());
+//            System.out.println(d3);
+//        } catch (ParseException e) {
+//            throw new RuntimeException(e);
+//        }
+
+        //三天打鱼。两天晒网，1990-01-01           2020-09-08  总天数%5 == 1 2 3 总天数%5==4 0
+        SimpleDateFormat dFormat=new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            Date d1=dFormat.parse("1990-01-01");
+            Date d2=dFormat.parse("2020-09-08");
+            long timechuo1=d1.getTime();//631123200000
+            long timechuo2=d2.getTime();//1599494400000
+            long result=timechuo2-timechuo1;//968371200000
+            if((result/1000/60/60/24)%5 == 1 || (result/1000/60/60/24)%5 == 2 ||(result/1000/60/60/24)%5 == 3)
+                System.out.println("在打鱼");
+            else if((result/1000/60/60/24)%5 == 4 ||(result/1000/60/60/24)%5 == 0)
+                System.out.println("在晒网");
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   }
+    }
 
     //*
     //模仿原生方法trim
@@ -154,25 +167,23 @@ public class StringTest {
 //    }
 
     //获取一个字符串在另一个字符串中出现的次数；
-//    public int getCount(String str1,String str2){
-//        int result=0;
-//        char[] charitems1=str1.toCharArray();
-//        char[] charitems2=str2.toCharArray();
-//        for(int i=0;i<charitems1.length-charitems2.length+1;i++){  //至关重要的一步
-//            boolean flag=false;
-//            for(int j=0;j<charitems2.length;j++){
-//                if(charitems2[j] == charitems1[i+j]){
-//                }else{
-//                    flag=false;
-//                    break;
-//                }
-//            }
-//            if(flag){
-//                result++;
-//            }
-//        }
-//            return result;
-//    }
+    public  int getCount(String str1,String str2){
+        int result=0;//计数器
+        char[] charitems1=str1.toCharArray();
+        char[] charitems2=str2.toCharArray();
+        for(int i=0;i<=charitems1.length-charitems2.length;i++){  //至关重要的一步
+            boolean flag=true;
+            for(int j=0;j<charitems2.length;j++){
+                if(charitems2[j] != charitems1[i+j]){
+                    flag=false;
+                    break;}
+            }
+            if(flag){
+                result++;
+            }
+        }
+            return result;
+    }
     //获取两个字符串中最大的相同子串
 
 
