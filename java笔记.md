@@ -851,6 +851,10 @@ StringBuffer reverse():将当前数组逆序
 
 
 
+### 15.5时间和日期
+
+System.currentTimeMillis()返回当前时间和1970年1月1日之间的***时间戳***
+
 
 
 

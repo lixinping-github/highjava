@@ -6,6 +6,7 @@ import javax.xml.transform.Result;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
+import java.util.Date;
 
 public class StringTest {
 
@@ -78,9 +79,9 @@ public class StringTest {
 //
 
 
-
-
-
+        java.util.Date D1=new java.util.Date();
+        System.out.println(D1.toString());
+        java.sql.Date d2=new java.sql.Date();
 
 
 
