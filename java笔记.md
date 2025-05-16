@@ -873,7 +873,13 @@ getTime();获取一个Date的时间戳
 
 :four::calendar日历抽象类和gregorianCalendar();日历类无法实例化，只能使用getInstance方法或者调用公历日历类gregorianCalendar
 
+常用方法：
 
+1. get()
+2. set()
+3. add()
+4. getTime()
+5. setTime()
 
 
 
