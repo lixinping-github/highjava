@@ -790,7 +790,7 @@ void.shutdown()关闭连接池
 15.3String常用方法
 
 1. int length() 获取一个字符串的字符长度；
-2. char charAt(int index) 根据下标获取一个字符串的制定字符，从0开始；返回字符；
+2. char charAt(int index) 根据下标获取一个字符串的指定字符，从0开始；返回字符；
 3.  boolean isEmpty() 判断一个字符串是否为空串；
 4. toLowerCase()将字符串全部转小写；
 5. toUpperCase()将字符串全部转大写；
@@ -835,7 +835,7 @@ String：是不可变字符序列，线程安全，效率偏低，建议多线�
 
 StringBuffer是可变字符序列；线程安全，效率偏低，建议多线程用，底层数据使用char数组存储数据。当长度过长，将会扩容；
 
-StringBuilder是可变字符序列；线程不安全，效率高，建议单线程用；
+StringBuilder是可变字符序列；线程不安全，效率高，建议单线程用；底层数据使用char数组存储数据。当长度过长，将会扩容；
 
 常用方法：
 
