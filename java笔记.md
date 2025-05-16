@@ -871,7 +871,7 @@ getTime();获取一个Date的时间戳
 
 解析：格式化的逆过程：---->日期  调用parse()方法
 
-:four::calendar日历抽象类和gregorainCalendar();
+:four::calendar日历抽象类和gregorianCalendar();日历类无法实例化，只能使用getInstance方法或者调用公历日历类gregorianCalendar
 
 
 
