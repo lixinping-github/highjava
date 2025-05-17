@@ -875,11 +875,11 @@ getTime();获取一个Date的时间戳
 
 常用方法：
 
-1. get()
-2. set()
-3. add()
-4. getTime()
-5. setTime()
+1. get()通过常量获取时间
+2. set()通过常量，更改成某个时间
+3. add()在原有基础上添加多少时间
+4. getTime()返回格式化日期，Date类
+5. setTime()将Date类的时间设置成日历类Calendar的时间
 
 
 
