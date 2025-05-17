@@ -2,7 +2,7 @@
 
 ---
 
-# 				java
+# 				javaEE
 
 ## 1.java多态性
 
@@ -880,6 +880,61 @@ getTime();获取一个Date的时间戳
 3. add()在原有基础上添加多少时间
 4. getTime()返回格式化日期，Date类
 5. setTime()将Date类的时间设置成日历类Calendar的时间
+
+
+
+### 1​5​.6​ ​java.time API新型java时间类API
+
+:one:LocalDate本地日期类
+
+1. now()根据当前时间创建本地日期对象
+2. of()静态方法，根据指定日期时间创建对象
+3. getDayofMonth()返回月份的天数
+4. getDayofYear()返回年份的天数
+5. getDayofWeek()返回星期几
+6. getMonth()返回一个月份枚举值
+7. getMonthValue()返回月份值
+8. getYear()返回年份
+9. withDayofMonth() WithDayofYear()WithMonth()WithYear()更改一月的某一天，更改一年的某一天，更改月份，更改年份
+
+
+
+:two:LocalTime本地时间类
+
+1. now()根据当前时间创建本地日期对象
+2. of()静态方法，根据指定日期时间创建对象
+
+
+
+:three:LocalDateTime本地日期时间类
+
+1. now()根据当前时间创建本地日期对象
+2. of()静态方法，根据指定日期时间创建对象
+3. getDayofMonth()返回月份的天数
+4. getDayofYear()返回年份的天数
+5. getDayofWeek()返回星期几
+6. getMonth()返回一个月份
+7. getMonthValue()返回月份值
+8. getYear()返回年份
+9. withDayofMonth() WithDayofYear()WithMonth()WithYear()更改一月的某一天，更改一年的某一天，更改月份，更改年份
+10. plusDays() plusMonths()plusWeeks()plusYears()plusHours()添加天数，添加月数，添加周数，添加年份，添加小时
+11. minusMonths() MinusDays() MinusWeeks()MinusYears()MinusHours()减去月份，减去天数，减去小时，减去时间
+
+### 15.7Instant瞬时类
+
+面向计算机的时间瞬时类；
+
+### 15.8DateTimeFormatter日期时间格式化类
+
+ofPattern()静态方法，通过指定字符进行格式化
+
+
+
+
+
+
+
+
 
 
 
