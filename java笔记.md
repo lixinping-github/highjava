@@ -926,11 +926,14 @@ getTime();获取一个Date的时间戳
 
 ### 15.8DateTimeFormatter日期时间格式化类
 
-ofPattern()静态方法，通过指定字符进行格式化
+1.ofPattern()静态方法，通过指定字符进行格式化
 
+```java
+     LocalDateTime d1=LocalDateTime.now();
+        System.out.println(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss").format(LocalDateTime.now()));
+```
 
-
-
+2.parse("时间串")；解析时间串方法
 
 
 
