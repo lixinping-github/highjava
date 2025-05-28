@@ -937,29 +937,49 @@ getTime();获取一个Date的时间戳
 
 
 
-## 16JAVA比较器comparable接口
+## 16JAVA比较器comparable接口 和compartor 
+
+### 16.1自然排序
+
+必须实现compareTo方法
+
+当前对象大于比较对象，返回正整数
+
+当前对象小于比较对象，返回负整数
+
+当前对象等于比较对象，返回0
 
 
 
+### 16.2定制排序Compartor
+
+重写compare()方法
 
 
 
+## 17System类
+
+1. native long  currentTimeMillis()返回当前时间时间戳
+
+2. void exit(int status) 退出程序，status 为zero 则为正常退出，status 为负数，则为异常退出
+3. System.gc()进行垃圾回收
+4. System.getProperty(String key)获取系统中属性为key的属性值，例如java.version版本;java.home安装目录;os.name操作系统名称;os.version操作系统版本；user.name用户名；user.home用户主目录；user.dir;用户当前工作目录
+
+## 18Math科学计算类
+
+1. random()返回随机数
+
+   其他方法详见开发文档！！！！！！！！！
+
+## 19BigInteger Bigdecimal类
+
+Biginteger大整数类型
+
+Bigdecimal 大小数类型
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+## 20枚举类与注解
 
 
 
