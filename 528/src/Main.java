@@ -51,7 +51,7 @@ public class Main {
         }catch (Exception e) {
             System.out.println("没找到");
         }
-Week.FRIDAY.compareTo(Week.MONDAY);
+
 
     }
 }

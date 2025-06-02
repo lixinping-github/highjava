@@ -1,4 +1,4 @@
-public enum Week {
+public enum Week implements {
     MONDAY("星期一"),
     TUESDAY("星期二"),
     WEDNESDAY("星期三"),
