@@ -981,6 +981,31 @@ Bigdecimal 大小数类型
 
 ## 20枚举类与注解
 
+### 20.1自定义枚举类
+
+```java
+public  class Season {
+    //声明Season对象的属性
+    private final String seasonName;
+    private final String seasonDesc;
+    //声明私有化构造器
+    private  Season(String seasonName,String seasonDesc){
+        this.seasonName =seasonName;
+        this.seasonDesc=seasonDesc;
+    }
+
+    public static final Season SPRING=new Season("春天","春暖花开");
+    public static final Season SUMMER=new Season("夏天","夏日炎炎");
+    public static final Season AUTUMN=new Season("秋天","秋有蚊子");
+    public static final Season Winter=new Season("冬天","冬日炎炎");
+    public String getSeasonName(){
+        return this.seasonName;
+    }
+    public String getSeasonDesc(){
+        return this.seasonDesc;
+    }
+}
+```
 
 
 
@@ -988,19 +1013,36 @@ Bigdecimal 大小数类型
 
 
 
+### 20.2enum关键字定义枚举类
 
+提供当前对象的名字，全部大写并后跟构造器函数括号，重写构造器。并定义相关参数；
 
+enum类中的toString()方法被重写过，是因为enum枚举类默认继承于Enum类
 
+```java
+public enum Week {
+    MONKEY("星期一"),
+    TUESDAY("星期二"),
+    WEDNESDAY("星期三"),
+    THURSDAY("星期四"),
+    FRIDAY("星期五"),
+    SATURDAY("星期六"),
+    SUNDAY("星期天");
 
+    String name;
+    private Week(String str){
+        this.name =str;
+    }
 
+}
 
+```
+### 20.3Enum类常用方法
+1. values实例方法，返回枚举类型的对象数组。
+2. valueOf可以将一个字符串转换为对应的枚举类对象，要求字符串的名字必须是枚举类对象的名字，如果不是则报错
+3. 
 
-
-
-
-
-
-
+枚举类的写法多样化，例如，1 将枚举类写到一个类中，
 
 
 

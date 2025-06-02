@@ -35,15 +35,23 @@ public class Main {
 //        System.out.println(System.getProperty("user.dir"));
 
 
+//    Season s1=Season.SUMMER;
+//    System.out.println(s1);
+//        Week[] weeks = Week.values();
+//        Thread.State[] states = Thread.State.values();
+//        for (int i = 0; i < states.length; i++) {
+//            System.out.println(states[i]);
+//        }
+//        System.out.println(Season.heart.SAD.heartName);
+//
 
-
-
-
-
-
-
-
-
+        try {
+            Week es= Week.valueOf("MONDAY");
+            System.out.println(es);
+        }catch (Exception e) {
+            System.out.println("没找到");
+        }
+Week.FRIDAY.compareTo(Week.MONDAY);
 
     }
 }
