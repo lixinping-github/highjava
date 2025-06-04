@@ -1,9 +1,6 @@
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 //TIP 要<b>运行</b>代码，请按 <shortcut actionId="Run"/> 或
 // 点击装订区域中的 <icon src="AllIcons.Actions.Execute"/> 图标。
@@ -23,16 +20,19 @@ public class Main {
      */
     @Test
     public void test1(){
-        List list = new ArrayList();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        updateList(list);
-        System.out.println(list);
+        Set set=new HashSet();
+        set.add(1);
+        set.add(2);
+        set.add(-1);
+        set.add("张三");
+        set.add("<UNK>");
+        set.add(123);
+
+        for(Object o:set){
+            System.out.println(o);
+        }
 
     }
 
-    private static void updateList(List list){
-        list.remove(2);
-    }
+
 }
