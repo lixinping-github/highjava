@@ -1328,6 +1328,10 @@ GOF提出，提供一种方法访问一个容器container对象中的各个元�
 2. next()返回下一个将要遍历的元素； 如果没找到，则会报异常NoSuchElementException
 3. remove()，删除迭代器当前游标指向的元素，调用多次remove会报错！！！！！！！未调用next()就调用remove（）也会报错！！！！！！！！！！！！！
 
+
+
+
+
 ### 25.4foreach增强循环
 
 底层调用iterator来实现循环遍历
@@ -1345,45 +1349,53 @@ public class Test {
         coll3.add(123);
         coll3.add(456);
         coll3.add(false);
-
        for(Object o : coll3){
            System.out.println(o);
        }
-
-
-
-
     }
-
 }
 
 ```
 
 
 
+### 25.5List接口，有序，可重复。动态数组；
+
+ArrayList和LinkedList vector三者
+
+相同点:都实现了的List接口，存储数据的特点相同，数据都是有序的，可重复的；
+
+ArrayList是一个线程不安全的类，效率高，底层使用Object数组存储数据
+
+Vector是一个线程安全的类，效率差，底层使用Object数组存储数据
+
+LinkedList底层使用双向链表存储，对于频繁的删除，插入数据，使用LinkedList链式集合比ArrayList效率要高
+
+
+
+### 25.6ArrayList底层详解
+
+1. 创建此对象首先在底层创建一个object类型的长度为10的数组
+2. 如果在添加元素过程中size大于object数组的长度，则在数组原有长度基础上，扩容1.5倍
+3. 如果新容量比要添加的元素长度还要小，则将要添加的元素长度给新容量
+4. 如果新容量比数组可以容纳的最大容量还要大，则报错......
 
 
 
 
 
+### 25.7List接口常用方法
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+1. add(int index ,Object ele)在index位置插入ele元素
+2. addAll(int index,Collection coll)在index位置插入多个ele元素
+3. get(int index)获取指定位置的元素
+4. indexOf(Object obj)获取obj元素在集合中首次出现的位置,如果不存在，返回-1
+5. lastindexOf(Object obj)获取Obj元素在集合中最后出现的位置，如果不存在，返回-1
+6. remove()根据一个索引删除一个元素；或者根据一个元素删除一个元素。返回删除的元素
+7. subList()获取一部分集合元素，参数为索引，包含前一个索引，不包含后一个索引
+8. set(int index,ele)设置指定位置的元素为ele
 
 
 

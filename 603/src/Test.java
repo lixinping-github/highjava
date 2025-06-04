@@ -6,14 +6,14 @@ import java.util.Iterator;
 public class Test {
     @org.junit.Test
     public void Test1(){
-        Collection coll3 = new ArrayList();
-        coll3.add(123);
-        coll3.add(456);
-        coll3.add(false);
-
-       for(Object o : coll3){
-           System.out.println(o);
+        String[] s1={"MM","MM","MM"};
+       for(String s:s1){
+           s="GG";
        }
+
+        for(int i=0;i<s1.length;i++){
+            System.out.println(s1[i]);
+        }
 
 
 
