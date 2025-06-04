@@ -3,8 +3,20 @@ import java.util.Scanner;
 
 //TIP 要<b>运行</b>代码，请按 <shortcut actionId="Run"/> 或
 // 点击装订区域中的 <icon src="AllIcons.Actions.Execute"/> 图标。
+
+
+/**
+ *
+ * &#064;Description  用于枚举类和注解
+ * @author lixinping
+ *&#064;date  2025年6月2日17:53:42
+ * @version 1.0
+ */
+
+
 public class Main {
     public static void main(String[] args) {
+
 //        mouse m1=new mouse1(21);
 //        mouse m2=new mouse2(23);
 //        mouse m3=new mouse2(65);
@@ -45,12 +57,16 @@ public class Main {
 //        System.out.println(Season.heart.SAD.heartName);
 //
 
-        try {
-            Week es= Week.valueOf("MONDAY");
-            System.out.println(es);
-        }catch (Exception e) {
-            System.out.println("没找到");
-        }
+//        try {
+//            Week es= Week.valueOf("MONDAY");
+//            es.show();
+//        }catch (Exception e) {
+//            System.out.println("没找到");
+//        }
+
+    @Interself()
+    int num=10;
+
 
 
     }

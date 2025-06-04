@@ -1036,13 +1036,379 @@ public enum Week {
 
 }
 
+
+
 ```
 ### 20.3Enum类常用方法  枚举类为一个对象
 1. values实例方法，返回枚举类型的对象数组。
 2. valueOf可以将一个字符串转换为对应的枚举类对象，要求字符串的名字必须是枚举类对象的名字，如果不是则报错
-3. 
+3. toString返回当前枚举类常量的名称
 
-枚举类的写法多样化，例如，1 将枚举类写到一个类中，
+枚举类的写法多样化，例如，1 将枚举类写到一个类中；2将枚举类作为一个单独的类实现。内部写法颇为不同，
+例如可只写常量名，不写内部构造；同样也可以给每一个枚举类对象写内部构造，拥有内部构造枚举类对象必须
+实现构造器；枚举类可实现其他接口，可单独给每一个枚举类对象实现接口方法，也可给所有枚举类对象设置同一个
+接口方法
+
+```java
+
+public enum Week implements info{
+    MONDAY("星期一"){
+        @Override
+        public void show(){
+            System.out.println("1");
+        }
+    },
+    TUESDAY("星期二"){
+        @Override
+        public void show(){
+            System.out.println("2");
+        }
+    },
+    WEDNESDAY("星期三"){
+        @Override
+        public void show(){
+            System.out.println("3");
+        }
+    },
+    THURSDAY("星期四"){
+        @Override
+        public void show(){
+            System.out.println("4");
+        }
+    },
+    FRIDAY("星期五"){
+        @Override
+        public void show(){
+            System.out.println("5");
+        }
+    },
+    SATURDAY("星期六"){
+        @Override
+        public void show(){
+            System.out.println("6");
+        }
+    },
+    SUNDAY("星期天"){
+        @Override
+        public void show(){
+            System.out.println("7");
+        }
+    };
+
+    String name;
+    private Week(String str){
+        this.name =str;
+    }
+
+}
+
+```
+
+
+## 21注解Annotation
+注解Annotation其实就是代码的特殊标记，这些标记可以在编译，类加载，运行时被读取，并执行相应的处理。使用
+Annotation程序员可以在不改变原有逻辑的情况下，在源文件中嵌入一些补充信息，代码分析工具，开发工具，部署工具
+可以通过这些补充信息进行验证或者部署。
+
+注解可以像修饰符一样被使用，可以用于修饰包，类，构造器，方法，成员变量，参数，局部变量的声明，信息被保存在
+Annotation的名值对结构中。
+
+
+### 21.1注解类型
+
+@author  作者注解
+
+@Description 描述注解
+
+@Version 版本信息
+
+@date 时间注解
+
+@param 参数注解
+
+@return 返回值注解
+
+@Override 重写/实现方法注解,该注解只能适用于方法
+
+@Deprecated 方法，类过时注解
+
+@SuppressWarning 抑制编译器警告注解
+
+@BeforeClass Junit单元测试注解
+
+@Before Junit单元测试注解
+
+@Test Junit单元测试注解
+
+@After Junit单元测试注解
+
+@AfterClass Junit单元测试注解
+
+@Exception 对可能抛出的异常进行说明
+
+@See 参考转向文档
+
+
+
+
+
+### 21.2自定义注解
+
+```java
+public @interface Interself {
+
+    String[] value() default "";
+}
+
+```
+
+### 21.3元注解 meta annotation
+
+元注解就是用来修饰其他注解的注解
+
+1. Retention 注解生命周期  SOURCE  CLASS                 RUNTIME可通过反射获取
+2. Target 用于指定被修饰的 Annotation能够修饰那些成员元素 例如类，字段，枚举，方法，构造器，参数等等等等
+3. Documented 被指定的注解 注解类会被javadoc提取成为文档，例如deprecated抛弃
+4. Inherited 某个类的注解拥有Inherited,则他的子类也将拥有这个注解
+
+### 21.4可重复注解/类型注解
+
+可重复注解，将多个注解写到一起，则我们再次创建注解并放入一个数组。
+
+@Repeatable（） 可重复注解，元注解类型，表示注解类型可重复使用
+
+类型注解 
+
+
+
+
+## 22异常处理
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 23继承
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 24封装
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+## 25集合
+
+### 25.1常用集合
+
+数组存储数据的特点以及缺点：长度一定，类型固定
+
+java中分为两大部分的集合
+
+:one: collection单列集合  
+
+​	:one: set 不可重复，元素无序列的集合
+
+​		:one: HashSet  
+
+​		:two: LinkedHashSet  
+
+​		:three:TreeSet  常用
+
+​	:two: list 可重复元素，有序列的集合  用来替换数组，我们或者称之为动态数组
+
+​		:seedling:Arraylist集合  
+
+​		:seedling:Linkedlist集合
+
+​		:seedling: Vector集合
+
+:two:Map映射集合	
+
+:seedling: HashMap
+
+:seedling: LinkedHashMap
+
+:seedling: TreeMap
+
+:seedling: Hashtable
+
+:seedling: Properties
+
+
+
+### 25.2Collection接口 集合接口
+
+1. add(Object o) 添加一个元素 将任意一个对象添加到我们当前的集合中。
+
+2. size() 获取我们当前集合的中添加的元素长度。
+
+3. addAII()添加多个元素，多个元素为一个集合类型。
+
+4. isEmpty()判断当前集合是否为空，是否有元素，或者说元素是否为0。
+
+5. clear()清空集合元素。
+
+6. contains() 判断参数元素在集合中是否存在，存在为true,不存在为false；
+
+7. containsAll()判断一个迭代器对象中的元素在集合中是否为子集，否为false,是为true;
+
+8. remove()移除一个元素，返回值为boolean表示是否移除成功，也会调用equals操作，如果找到多个，则只会删除找到的第一个
+
+9. removeAll()从一个集合中移除多个元素，找到了就移除，没找到就不移除，只要移除了某一个就会返回true
+
+10. retainAll()求两个集合的交集，并将最后交集给调用集合
+
+11. hashCode() 返回当前对象的 hash值
+
+12. toArray()将集合转换为一个数组；返回值类型为Object类型的数组
+
+13. Arrays.asList()参数为可变形参，将多个可变形参转换为一个集合
+
+14. equals() 比较两个集合之间是否相等，其中在list<T>中对equals方法进行了重写操作
+
+15. Iterator<E>()迭代器，用于遍历集合元素
+
+    
+
+### 25.3iterator迭代器对象   迭代器对象只能消耗一次
+
+主要用于遍历Collection集合中的元素。
+
+GOF提出，提供一种方法访问一个容器container对象中的各个元素，又不暴露该对象的内部细节。迭代器模式就是为容器而生。
+
+主要方法
+
+1. hasNext()如果容器中还存在没有遍历的元素，则返回true; 判断是否还有下一个元素
+2. next()返回下一个将要遍历的元素； 如果没找到，则会报异常NoSuchElementException
+3. remove()，删除迭代器当前游标指向的元素，调用多次remove会报错！！！！！！！未调用next()就调用remove（）也会报错！！！！！！！！！！！！！
+
+### 25.4foreach增强循环
+
+底层调用iterator来实现循环遍历
+
+```java
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Iterator;
+
+public class Test {
+    @org.junit.Test
+    public void Test1(){
+        Collection coll3 = new ArrayList();
+        coll3.add(123);
+        coll3.add(456);
+        coll3.add(false);
+
+       for(Object o : coll3){
+           System.out.println(o);
+       }
+
+
+
+
+    }
+
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
