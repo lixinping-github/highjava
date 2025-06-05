@@ -20,17 +20,10 @@ public class Main {
      */
     @Test
     public void test1(){
-        Set set=new HashSet();
-        set.add(1);
-        set.add(2);
-        set.add(-1);
-        set.add("张三");
-        set.add("<UNK>");
-        set.add(123);
+        HashSet set=new HashSet();
+        System.out.println(set.add(new Student("jom",23)));
+        System.out.println(set.add(new Student("jom",23)));
 
-        for(Object o:set){
-            System.out.println(o);
-        }
 
     }
 
