@@ -1423,17 +1423,86 @@ Set接口的主要实现类，线程不安全的，无序的，不可重复的�
 
 
 
-### 25.9LinkedHashSet
+### 25.9LinkedHashSet 顺序遍历hashset
 
 线程不安全，无序的，不可重复的集合，是Hash的子类，可以按照添加的顺序来进行遍历
 
-### 25.10TreeSet 
+### 25.10TreeSet  树集合  中序排序
 
-使用红黑树来存储数据，数据类型唯一；按照对象的某个属性进行排序。
+使用红黑树来存储数据，数据类型唯一；按照对象的某个属性进行排序。存储的数据类型必须是同一个类的对象；！！！！！
+
+TreeSet中，判断元素是否相同的标准不再是equals 和HashCode，**而是比较器CompareTo和定制排序Compare**
+
+自然排序
+
+```java
+ @Override
+    public int hashCode(){
+        int result= name!=null ? name.hashCode() : 0;
+        result = 31*result+age;
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object stu) {
+        if(stu instanceof Student){
+            Student stu2 = (Student) stu;
+            return stu2.getName().equals(this.getName()) && stu2.getAge() == this.getAge();
+        }
+        else{
+            return false;
+        }
+    }
+//    @Override
+//    public int compare(Student stu1,Student stu2){
+//        return stu1.getName().compareTo(stu2.getName())+stu1.getAge()-stu2.getAge();
+//    }
+
+    @Override
+    public int compareTo(Student stu){
+        return  this.getName().compareTo(stu.getName());
+
+    }
+```
+
+定制排序
+
+重写Comparator接口，实现compare方法
+
+```java
+  @Test
+    public void test1(){
+
+        Comparator comparator = new Comparator() {
+            @Override
+           public int compare(Object o1, Object o2) {
+                if(o1 instanceof Student && o2 instanceof Student){
+                    Student s1=(Student)o1;
+                    Student s2=(Student)o2;
+                    return Integer.compare(s1.getAge(), s2.getAge());
+
+                }else{
+                    throw new RuntimeException();
+                }
+
+            }
+        };
+      TreeSet set=new TreeSet(comparator);
+        set.add(new Student("lisa",20));
+        set.add(new Student("dade",30));
+        set.add(new Student("jack",40));
+        set.add(new Student("jack",18));
+        set.add(new Student("aim",10));
+        set.add(new Student("bob",9));
 
 
 
-
+      for (Object o : set) {
+          System.out.println(((Student)o).getName()+"~~~"+((Student)o).getAge());
+      }
+    }
+}
+```
 
 
 

@@ -1,7 +1,5 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Iterator;
+import java.time.LocalDate;
+import java.util.*;
 
 public class Test {
     @org.junit.Test
@@ -14,8 +12,12 @@ public class Test {
         for(int i=0;i<s1.length;i++){
             System.out.println(s1[i]);
         }
+        Collection coll=new LinkedList();
+        coll.add(new Person("张三",12, LocalDate.of(2025,1,12)));
 
+        coll.add(new Person("张三",12, LocalDate.of(2025,1,12)));
 
+        coll.forEach(System.out::println);
 
 
     }

@@ -1,4 +1,9 @@
-public class Student {
+import com.sun.xml.internal.ws.developer.Serialization;
+
+import java.util.Comparator;
+
+
+public class Student implements Comparable<Student> {
     private String name;
     private int age;
     public Student(String name, int age) {
@@ -24,11 +29,8 @@ public class Student {
     @Override
     public int hashCode(){
         int result= name!=null ? name.hashCode() : 0;
-        result = result+age;
-        System.out.println(result);
-        System.out.println("调用了");
+        result = 31*result+age;
         return result;
-
     }
 
     @Override
@@ -40,5 +42,15 @@ public class Student {
         else{
             return false;
         }
+    }
+//    @Override
+//    public int compare(Student stu1,Student stu2){
+//        return stu1.getName().compareTo(stu2.getName())+stu1.getAge()-stu2.getAge();
+//    }
+
+    @Override
+    public int compareTo(Student stu){
+        return  this.getName().compareTo(stu.getName());
+
     }
 }
